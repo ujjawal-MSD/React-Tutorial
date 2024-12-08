@@ -1,5 +1,14 @@
-import Image from "./Components/Image"
+// import Dynamic from "./Components/Dynamic"
+// import Profile from "./Components/Profile"
+// import Image from "./Components/Image"
 // import Map from "./Components/Map"
+
+// import EventHandling from "./Components/EventHandling"
+// import { EventProps } from "./Components/EventProps"
+// import Style from "./Components/Styling-Tecniques/Style"
+
+import Counter from "./Components/Hooks/Counter"
+import HooksPractice from "./Components/Hooks/HooksPractice"
 
 // // import default Components 
 // import Practice from "./Components/Practice"
@@ -24,10 +33,17 @@ const App = () => {
 
   return (
     <>
-      <Image />
+      {/* <Image /> */}
       {/* <Practice /> */}
       {/* <Map /> */}
       {/* <Properties products={products} /> */}
+      {/* <Dynamic /> */}
+      {/* <Profile /> */}
+      {/* <Style /> */}
+      {/* <EventHandling/> */}
+      {/* <EventProps/> */}
+      {/* <Counter/> */}
+      <HooksPractice/>
 
     </>
   )
