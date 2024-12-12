@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { use } from 'react'
 
 // const HooksPractice = () => {
 //     let [greet, setGreet] = useState("Hello World")
@@ -156,40 +157,67 @@ import React, { useState } from 'react'
 
 
 
+// const HooksPractice = () => {
+
+//     let [items, setItems] = useState([])
+//     return (
+//         <div
+//             style={{
+//                 height: "100vh",
+//                 display: "flex",
+//                 flexDirection: "column",
+//                 alignItems: "center",
+//                 justifyContent: "center",
+//             }}
+//         >
+//             <button
+//                 style={{
+//                     padding: "10px 20px",
+//                     marginBottom: "20px",
+//                     fontSize: "16px",
+//                 }}
+//                 onClick={() => setItems([...items, `Item ${items.length + 1}`])}
+//             >
+//                 ADD ITEMS
+//             </button>
+
+//             <ul>
+//                 {items.map((items, index) => (
+
+//                     <li key={index} style={{ fontSize: "18px", margin: "5px 0" }}> {items}</li>
+
+//                 ))}
+//             </ul>
+
+//         </div>
+//     );
+// };
+
+
+const users = [
+    { name: "Alice", age: 25 },
+    { name: "Jane", age: 22 },
+    { name: "Doe", age: 28 },
+    { name: "Smith", age: 30 },
+    { name: "Alex", age: 26 },
+]
+
 const HooksPractice = () => {
-
-    let [items, setItems] = useState([])
+    let [elements, setElements] = useState(users)
+    let userCount = users.length
+    let averageAge = users.reduce((acc, users) => acc + users.age, 0) / userCount
     return (
-        <div
-            style={{
-                height: "100vh",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-            }}
-        >
-            <button
-                style={{
-                    padding: "10px 20px",
-                    marginBottom: "20px",
-                    fontSize: "16px",
-                }}
-                onClick={() => setItems([...items, `Item ${items.length + 1}`])}
-            >
-                ADD ITEMS
-            </button>
-
+        <>
+            <h1>Users List </h1>
             <ul>
-                {items.map((items, index) => (
-
-                    <li key={index} style={{ fontSize: "18px", margin: "5px 0" }}> {items}</li>
-
-                ))}
+                {elements.map((user, index) => {
+                    return <li key={index}> {user.name} - {user.age}</li>
+                })}
+                <li>Total Users - {userCount}</li>
+                <li>Average age - {averageAge} </li>
             </ul>
-
-        </div>
-    );
-};
+        </>
+    )
+}
 
 export default HooksPractice

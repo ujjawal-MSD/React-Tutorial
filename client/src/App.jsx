@@ -9,6 +9,8 @@
 
 import Counter from "./Components/Hooks/Counter"
 import HooksPractice from "./Components/Hooks/HooksPractice"
+import { LiftStateUp } from "./Components/Hooks/LiftStateUp"
+import ToggleSwitch from "./Components/Projects/ToggleSwitch/ToggleSwitch"
 
 // // import default Components 
 // import Practice from "./Components/Practice"
@@ -43,7 +45,9 @@ const App = () => {
       {/* <EventHandling/> */}
       {/* <EventProps/> */}
       {/* <Counter/> */}
-      <HooksPractice/>
+      {/* <HooksPractice/> */}
+      {/* <LiftStateUp/> */}
+      <ToggleSwitch/>
 
     </>
   )
